@@ -1,0 +1,231 @@
+
+<!--ejercicio 1 controles-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calcularCubo() {
+            var v = document.getElementById('num').value;
+            var cubo = v * v * v;
+            alert(cubo);
+        }
+    </script>
+    <form>
+        Ingrese un valor:
+        <input type="number" id="num">
+        <br>
+        <input type="button" value="Calcular cubo" onClick="calcularCubo()">
+    </form>
+</body>
+
+</html>
+
+<!--ejercicio 2 controles-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="number" name="numero1" id="numero1">
+        <input type="number" name="numero2" id="numero2">
+        <input type="button" onclick="numeroMayor()" value="calcular">
+    </form>
+    <script>
+        function numeroMayor() {
+            var num1 = document.getElementById('numero1').value;
+            var num2 = document.getElementById('numero2').value;
+            if (num1 > num2) {
+                alert('el numero 1 es mayor que el numero 2');
+            } else {
+                alert('el numero 2 es mayor que el numero 1');
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<!--ejercicio 3 controles -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function concatenar() {
+            var nom = document.getElementById('nombre').value;
+            var ape = document.getElementById('apellido').value;
+            document.getElementById('resultado').value = nom + ape;
+        }
+    </script>
+
+    <form>
+        Ingrese nombre:
+        <input type="text" id="nombre">
+        <br>
+        Ingrese apellido:
+        <input type="text" id="apellido">
+        <br>
+        <input type="button" value="Concatenar datos ingresados" onClick="concatenar()">
+        <br>
+        <input type="text" id="resultado">
+    </form>
+    </script>
+
+</body>
+
+</html>
+
+<!--control pasword-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        ingrese su clave:
+        <input type="password"  id="clave1">
+        vuelva a escribir su clave:
+        <input type="password"  id="clave2">
+        <input type="button" value="verificar claves" onclick="verificarClaves()">
+    </form>
+    <script>
+        function verificarClaves(){
+            var clave1= document.getElementById('clave1').value;
+            var clave2= document.getElementById('clave2').value;
+            if(clave1==clave2){
+                document.write('claves ingresadas correctamente');
+            }else{
+                document.write('no coinciden ambas claves')
+            }
+        }
+
+    </script>
+</body>
+</html>
+<!--checkbox-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="checkbox"  id="futbol">futbol<br>
+        <input type="checkbox"  id="basquet">basquet<br>
+        <input type="checkbox"  id="tenis">tenis<br>
+        <input type="checkbox"  id="indor">indor<br>
+        <input type="button" value="seleccion" onclick="verSeleccion()">
+    </form>
+    <script>
+    var futbol=document.getElementById('futbol');
+    var basquet=document.getElementById('basquet');
+    var tenis=document.getElementById('tenis');
+    var indor=document.getElementById('indor');
+    var deportes='';
+
+    function verSeleccion(){
+    if(futbol.checked){
+        deportes=deportes+'futbol';
+    }
+    if(basquet.checked){
+        deportes=deportes+'basquet';
+    }
+    if(tenis.checked){
+        deportes=deportes+'tenis';
+    }
+    if(indor.checked){
+        deportes=deportes+'indor';
+    }
+    document.write('los deportes seleccionados son:  ', deportes);
+}
+
+    </script>
+</body>
+</html>
+
+<!--control radio -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="radio" name="edad" id="mayor">mayor de 18 años<br>
+        <input type="radio"  name="edad"id="menor">menor de 18 años<br>
+       <input type="button" value="entrar" onclick="entrar()">
+    </form>
+    <script>
+    function entrar(){
+        var mayor=document.getElementById('mayor');
+        var menor=document.getElementById('menor');
+        if(mayor.checked){
+            alert('puede entrar al sitio');
+        }else{
+            alert('tiene que ser mayor de edad ')
+        }
+    }
+    </script>
+    
+</body>
+</html>
+<!--textarea-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+       <input type="text"  id="nombre">ingrese su nombre<br>
+       <input type="text"  id="correo">ingrese su correo<br>
+       <textarea  id="comentarios" cols="30" rows="10"></textarea>comentarios
+       <input type="button" value="verificar" onclick="verificar()">
+    </form>
+    <script>
+    function verificar(){
+    var nombre=document.getElementById("nombre").value;
+    var correo=document.getElementById("correo").value;
+    var comentarios=document.getElementById('comentarios').value;
+    alert('nombre:'+'\n'+nombre+'\n'+'correo:'+'\n'+correo+'\n'+'comentarios:'+'\n'+comentarios );
+}
+    </script>
+</body>
+</html>
+
+
