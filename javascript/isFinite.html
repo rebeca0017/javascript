@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        var valor1 = 120;
+        if (isFinite(valor1)) //true por que verifica si el valor uno es un numero finito.
+            document.write('el valor 1 tiene un valor finito que es el ' + valor1);
+        else
+            document.write('el valor 1 no tiene un valor finito que es el ' + valor1);
+        document.write('<br>');
+        var valor2 = 10e399;
+        if (isFinite(valor2)) //false
+            document.write('el valor 2 tiene un valor finito que es el ' + valor2);
+        else
+            document.write('el valor 2 no tiene un valor finito que es el ' + valor2);
+        document.write('<br>');
+        var valor3 = -10e399;
+        if (isFinite(valor3))  //false
+            document.write('el valor 3 tiene un valor finito que es el ' + valor3);
+        else
+            document.write('el valor 3 no tiene un valor finito que es el ' + valor3);
+        document.write('<br>');
+        var valor4 = 'juan';
+        if (isFinite(x4))  //false
+            document.write('el valor 4 tiene un valor finito que es el ' + valor4);
+        else
+            document.write('el valor 4 no tiene un valor finito que es el ' + valor4);
+    </script>
+</body>
+</html>

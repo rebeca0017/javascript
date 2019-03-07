@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        var factura = prompt('Ingrese tipo y nro de factura:', '');
+        var patron = /^[a|b|c]\d+$/;//Es decir debe comenzar con un carácter a,b o c, seguido de dígitos.
+        if (patron.test(factura))
+            document.write('Se ingresó un tipo y nro de factura correcta');
+        else
+            document.write('Se ingresó un tipo y nro de factura incorrecta');
+    </script>
+</body>
+</html>
+
+<!--ejercicio 2-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        var palabra = prompt('Ingrese una palabra que comience con va o ba:', '');
+        var patron = /^[va|ba]/; //si una palabra empieza con va o ba 
+        if (patron.test(palabra))
+            document.write('La palabra comienza con va o ba');
+        else
+            document.write('La palabra no comienza con va o ba');
+    </script>
+</body>
+</html>

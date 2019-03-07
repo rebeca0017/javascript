@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+  <script>
+    var v1 = prompt('Ingrese primer valor:', '');
+    var v2 = prompt('Ingrese segundo valor:', '');
+    v1 = parseInt(v1);
+    v2 = parseInt(v2);
+    var mayor;
+    //antes del ? es la condicion, despues del ? son las lineas a ejecutar, caso contrario se ejecutara lo que esta despues de los dos puntos
+    //es igual que hacer un if else
+    v1 > v2 ? mayor = v1 : mayor = v2;
+    document.write('El mayor de los dos valores es:' + mayor);
+  </script>
+
+</body>
+
+</html>

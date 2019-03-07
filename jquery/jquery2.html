@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>1111111111</td>
+            <td>1111111111</td>
+            <td>1111111111</td>
+            <td>1111111111</td>
+        </tr>
+        <tr>
+            <td>2222222222</td>
+            <td>2222222222</td>
+            <td>2222222222</td>
+            <td>2222222222</td>
+        </tr>
+        <tr>
+            <td>3333333333</td>
+            <td>3333333333</td>
+            <td>3333333333</td>
+            <td>3333333333</td>
+        </tr>
+        <tr>
+            <td>4444444444</td>
+            <td>4444444444</td>
+            <td>4444444444</td>
+            <td>4444444444</td>
+        </tr>
+        <tr>
+            <td>5555555555</td>
+            <td>5555555555</td>
+            <td>5555555555</td>
+            <td>5555555555</td>
+        </tr>
+    </table>
+</body>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(inicializarEventos);
+
+    function inicializarEventos() {
+        $("tr").click(presionFila);
+        $("td").clic(presionColumna)
+    }
+
+    function presionFila() {
+        $(this).css("background-color", "#09F0B8");//obtener la referencia de que elemento en particular dispara el evento.
+    }
+    function presionColumna() {
+        $(this).css("background-color", "#09F010");//obtener la referencia de que elemento en particular dispara el evento.
+    }
+
+</script>
+
+</html>

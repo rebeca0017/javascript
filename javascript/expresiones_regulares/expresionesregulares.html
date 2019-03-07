@@ -1,0 +1,139 @@
+<!--ejercicio 1-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        var valor = prompt('Ingrese un numero entero positivo de 3 dígitos', '');
+        var patron = new RegExp('^[0-9]{3}$');//del 0 al 9 que escriba un numero de tres digitos
+        if (patron.test(valor))//test verifica la expresion regular esta contrastada con valor 
+            alert('Se ingresó un valor entero positivo de 3 dígitos');
+        else
+            alert('No se ingresó un valor entero positivo de 3 dígitos');
+    </script>
+</body>
+
+</html>
+
+<!--ejercicio 2-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        var oracion = prompt('Ingrese una oración', '');
+        var patron = /hora/;
+        if (patron.test(oracion))
+            alert('La oración ingresada contiene la palabra \'hora\'');
+        else
+            alert('La oración ingresada no contiene la palabra \'hora\'');
+    </script>
+</body>
+
+</html>
+
+<!--ejercicio 3-->
+<!--conjunto de caracteres-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        var palabra = prompt('Ingrese una palabra', '');
+        var patron = /[aeiouAEIOUáéíóú]$/;//mostrar si finaliza con vocal
+        if (patron.test(palabra))
+            alert('La palabra finaliza con vocal');
+        else
+            alert('La palabra no finaliza con vocal');
+    </script>
+</body>
+
+</html>
+
+<!--ejercicio 4-->
+<!--cuantificadores o repeticiones -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var oracion = prompt('Ingrese una palabra', '');
+        var patron = /[0-9]{2,}/;//numero del 0 al nuevo que contenga por lo menos 2 digitos.
+        if (patron.test(oracion))
+            alert('La oración tiene un número de al menos 2 dígitos');
+        else
+            alert('La oración no tiene un número de al menos 2 dígitos');
+    </script>
+
+</body>
+
+</html>
+
+<!--ejercicio 5-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var patente = prompt('Ingrese una patente', '');
+        var patron = /^[a-z]{2}[0-9]{3}[a-z]{2}$/; // 2 letras 3 numero y finalmente 2 letras
+        if (patron.test(patente))
+            alert('La patente ingresada es correcta');
+        else
+            alert('La patente ingresada no es correcta');
+    </script>
+
+</body>
+
+</html>
+
+<!--ejercicio 6-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var oracion = prompt('Ingrese una oracion', '');
+        var patron = /\s[0-9]{5}\s/;// el string debe contener un espacio en blanco, seguido de 5 dígitos y otro espacio en blanco.
+        if (patron.test(oracion))
+            alert('La oración tiene un número de 5 dígitos');
+        else
+            alert('La oración no tiene un número de 5 dígitos');
+    </script>
+
+</body>
+
+</html>

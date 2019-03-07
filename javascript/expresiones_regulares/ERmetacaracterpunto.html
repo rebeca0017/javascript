@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var cadena = prompt('Ingrese una cadena de cinco caracteres que comience y finalice con a', '');
+        var patron = /^a...a$/;// comience con a y finalice con a 
+        if (patron.test(cadena))//test verifica la expresion regular esta contrastada con valor 
+            document.write('cadena correcta');
+        else
+            document.write('cadena incorrecta');
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var nro = prompt('Ingrese un número con el formato 999.99', '');
+        var patron = /^\d{3}\.\d{2}$/; // debe empezar con 3 digitos, luego un punto, y finalmente dos digitos.
+        if (patron.test(nro))
+            document.write('nro correcto');
+        else
+            document.write('nro incorrecto');
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+

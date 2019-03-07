@@ -1,0 +1,86 @@
+<!--metodo search
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        var oracion = 'La noche está muy oscura y estrellada.';
+        if (oracion.search(/estrella/) != -1)//si el string estrella esta contenido en la variable oracion, diferente de -1 es decir desde donde empieza la cadena. 
+            alert('el string estrella está contenido en la variable oracion');
+    </script>
+</body>
+
+</html>
+
+<!--metodo replace
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var oracion = 'uno dos tres uno dos tres uno dos tres';
+        var cadena = oracion.replace(/uno/g, '1');//sustituyendo todas las cadenas 'uno' por el caracter '1'. Para hacer que se sustituyan todas las ocurrencias debemos emplear el modificador g:
+        alert(cadena); //1 dos tres 1 dos tres 1 dos tres
+    </script>
+
+</body>
+
+</html>
+
+<!--metodo split
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var cadena = '(2,3)-(4,4)-(9,3)';
+        var vec = cadena.split(/-/);// subdividir a cadena con - 
+        for (var x = 0; x < vec.length; x++) {
+            document.write(vec[x] + '<br>');
+        }
+    </script>
+
+</body>
+
+</html>
+-->
+
+<!--metodo match-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var cadena = 'juan 10 luis 43 pedro 21 carlos 33';
+        var vec = cadena.match(/\d+/g);//retorna un vector con los string señalados.
+        for (var x = 0; x < vec.length; x++) {
+            document.write(vec[x] + '<br>');
+        }
+    </script>
+
+</body>
+
+</html>

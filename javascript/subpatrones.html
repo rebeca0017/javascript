@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  var nro=prompt('ingrese un número entero o real:','');
+  var patron=/^[+-]?\d+(\,\d+)?$/;/*Como la coma y la parte decimal son opcionales los encerramos entre 
+  paréntesis y lo finalizamos con el cuantificador '?'Esto hace que cuando se ingresa la coma deba ingresarse 
+  uno o más dígitos obligatoriamente ya que los agrupamos mediante los paréntesis.*/
+  if (patron.test(nro))
+    alert('Correcto');
+  else
+    alert('Incorrecto');
+</script>
+  
+</body>
+</html>
+
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  var hora=prompt('ingrese una hora con el formato hh:mm:ss','');
+  var patron=/^(0[1-9]|1\d|2[0-3]):([0-5]\d):([0-5]\d)$/;/*La parte inicial puede tomar un valor entre 0 y 23:Luego 
+  debe ingresarse el caracter dos puntos. La parte de los segundos queda definida por el patrón ([0-5]\d) es decir un 
+  valor entre 0 y 5 seguido de cualquier dígito. Finalmente los segundos es similar a los minutos: ([0-5]\d)*/
+  if (patron.test(hora))
+    alert('Correcto');
+  else
+    alert('Incorrecto');
+</script>
+  
+</body>
+</html>

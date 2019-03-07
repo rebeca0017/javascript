@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+    <style>
+        #cronometro {
+            font-size: 50px;
+            color: #0a0;
+        }
+    </style>
+</head>
+<body>
+    <span id="cronometro">0</span>
+    <br>
+    <input type="button" id="boton1" value="detener">
+    <script>
+        
+        window.addEventListener('load', inicio, false);
+        var reloj;//Definimos una variable global que guarde la referencia del tiempo
+        function inicio() {//en la función inicio registramos la función que debe ejecutarse cada un segundo
+            reloj = setInterval(procesar, 1000);
+            //recuperamos el boton y le asignamos un evento click, el nombre de la funcion que se ejecutara y el false. 
+            document.getElementById('boton1').addEventListener('click', presionBoton, false);
+        }
+        //La función procesar se ejecuta cada un segundo, 
+        function procesar() {//siempre y cuando se haya registrado esta función llamando a setInterval en la función inicio. 
+            var num = parseInt(document.getElementById('cronometro').innerHTML);// extraer el valor del cronómetro
+            num++// incrementarlo en uno 
+            document.getElementById('cronometro').innerHTML = num;// se actualiza
+        }
+        //La función presionBoton se ejecuta cada vez que lo presionamos 
+        function presionBoton() {
+            if (document.getElementById('boton1').value == 'detener') {//controlar la etiqueta del botón para ver si dice 'detener'
+                clearInterval(reloj);//esto hace que se suprima la ejecución de la función procesar evita que siga el temporizador.
+                document.getElementById('boton1').value = 'continuar';//el boton se remplaza por continuar.
+            }
+            else {// si el if es falso continua la funcion procesar. 
+                reloj = setInterval(procesar, 1000);
+                document.getElementById('boton1').value = 'detener';
+            }
+        }
+    </script>
+</body>
+</html>

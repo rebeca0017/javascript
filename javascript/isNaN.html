@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        var valor1, valor2, suma;//declaramos variables
+        valor1= parseInt(prompt('Ingrese el primer valor:', ''));
+        valor2= parseInt(prompt('Ingrese el segundo valor:', ''));
+        
+        if (isNaN(valor1) || isNaN(valor2)) {//verificamos si alguno de los dos valores no es numero.
+            document.write('Al menos uno de los dos valores ingresados no es numérico.');
+        }
+        else {
+            suma = varlo1 + valor2;
+            document.write('La suma de los dos valores es:' + suma);
+        }
+    </script>
+</body>
+</html>

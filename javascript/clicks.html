@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div style="width:200px;height:200px;background:#616129" id="recuadro1">
+        Prueba del evento click
+    </div>
+    <div style="width:200px;height:200px;background:#ff00f2" id="recuadro2">
+        Prueba del evento dblclick
+    </div>
+    <script>
+        addEventListener('load', inicio, false);//load apenas se carge la pagina se ejecute la funcion inicio.
+        function presion1() {
+            alert('se hizo click');
+        }
+        function presion2() {
+            alert('se hizo doble click');
+        }
+        function inicio() {
+            document.getElementById('recuadro1').addEventListener('click', presion1, false);//recuperamos el cuadro1 le asignamos un evento, llamamos a la funcion, y le damos un valor.
+            document.getElementById('recuadro2').addEventListener('dblclick', presion2, false);//recuperamos el cuadro2 le asignamos un evento, llamamos a la funcion, y le damos un valor.
+        }
+    </script>
+</body>
+</html>
+

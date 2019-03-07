@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var oracion = 'saliendo de la casa que esta en la montaña';
+        var patron1 = /la/;// El primer patrón de búsqueda es verificar si contiene los caracteres 'la' la oración:
+        var vector1 = patron1.exec(oracion);//El método exec retornará un valor distinto a null (retorna un vector) ya que la palabra 'la' está contenida en la oración.
+        document.write(vector1.index);//index almacena la posición dentro del string donde se cumple el patrón
+        document.write('<br>');
+        document.write(vector1.input);// input almacena la cadena que se está analizando.
+        document.write('<br>');
+        var patron2 = /lax/;
+        var vector2 = patron2.exec(oracion);
+        document.write(vector2);//no retornara un vector.
+    </script>
+
+</body>
+
+</html>
+
+
+
+

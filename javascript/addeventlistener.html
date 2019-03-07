@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+    <!--estilo del boton llamamos al boton con .boton señalado en el class-->
+    <style>
+        .boton {
+            width: 50px;
+            height: 50px;
+        }
+
+        #resultado {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="boton0" name="boton0" value="0" class="boton">
+    <input type="button" id="boton1" name="boton1" value="1" class="boton">
+    <input type="button" id="boton2" name="boton2" value="2" class="boton">
+    <input type="button" id="boton3" name="boton3" value="3" class="boton">
+    <input type="button" id="boton4" name="boton4" value="4" class="boton">
+    <input type="button" id="boton5" name="boton5" value="5" class="boton">
+    <input type="button" id="boton6" name="boton6" value="6" class="boton">
+    <input type="button" id="boton7" name="boton7" value="7" class="boton">
+    <input type="button" id="boton8" name="boton8" value="8" class="boton">
+    <input type="button" id="boton9" name="boton9" value="9" class="boton">
+    <br>
+    <div id="resultado"></div>
+    <script>
+        window.addEventListener('load', inicio, false);//window cuando se termine de cargar la pagina (evento,funcion,valor)
+
+        function inicio() {
+            for (var x = 0; x <= 9; x++) {//disponemos de un for para que se repita 10 veces
+                document.getElementById('boton' + x).addEventListener('click', presion, false);//debemos ir obteniendo el id del botón concatenando 'boton' y el contador del for
+            }
+        }
+        function presion(evt) {
+            /*Como en este problema debemos ir concatenando el número presionado procedemos a obtener la referencia del div y asignarle el valor actual 
+            más la propiedad value del botón presionado*/
+            document.getElementById('resultado').innerHTML =document.getElementById('resultado').innerHTML + evt.target.value;//target:Referencia del objeto que generó el evento 
+        }
+    </script>
+</body>
+</html>
