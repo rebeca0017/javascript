@@ -5,47 +5,52 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Highlight jQuery plugin</title>
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="plugin.js"></script>
+  <script type="text/javascript">
+    /*$(document).ready(function () {
+      // Plugin sin parámetros.
+      $('p').setBackground();
+    });*/
+    /*$(document).on("ready", function () {									 //iniciar funciones para que estén disponibles
+       $('#enviar').enviar("datos enviados")
+     })*/
 
+    $(document).ready(function () {
+      var table=$.myPlugin({
+        color: 'red'
+      });
+      table.drawTable(this);
+    });
+
+
+
+
+
+
+
+    $(document).ready(function () {
+      $.comprobarAlert("Hola!");
+    });
+
+  </script>
 </head>
 
 <body>
-  <div class="field-item even" property="content:encoded">
-    <h1>hola</h1>
-    <p>pagina de prueba 1</p>
-    <p>pagina de prueba 2</p>
-    <p>pagina de prueba 3</p>
-    <p>pagina de prueba 4</p>
-    <table border="1">
-      <thead>
-        <tr>
-          <th>hola</th>
-          <th>bb</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>hahahahs</td>
-          <td>hahahahs</td>
-        </tr>
-      </tbody>
-    </table>
-
-
-  </div>
+  <table border="1" id="tabla">
+    <thead>
+      <tr>
+        <th>hola</th>
+        <th>hola</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>como</td>
+        <td>estas</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
-<script type="text/javascript" src="jquery-3.3.1.js"></script>
-<script type="text/javascript" src="plugin.js"></script>
-<script type="text/javascript">
-  /*$(document).ready(function () {
-    // Plugin sin parámetros.
-    $('p').setBackground();
-  });*/
-
-  $(document).ready(function () {
-    // Plugin sin parámetros.
-    $('table').myPlugin('red');
-  });
-
-</script>
 
 </html>
